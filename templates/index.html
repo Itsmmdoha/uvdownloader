@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Udvash Video Downloader</title>
+        <style>
+            body {
+                background-color: purple;
+            }
+            input[type="submit"] {
+                background-color: red;
+                width: 100px;
+                height: 50px;
+                border-radius: 5px;
+                border: none;
+                color: white;
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: salmon;
+                color: black;
+            }
+            input[type="password"], input[type="url"] {
+                border-radius: 5px;
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                max-width: 400px;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            h1 {
+			  font-family: Arial, sans-serif;
+              font-size: 3rem;
+              text-align:center;
+              color:white;
+              margin-top:2rem;
+              margin-bottom:2rem
+            }
+          }
+        </style>
+    </head>
+    <body>
+        <h1>Udvash Video Downloader</h1>
+        <form action="http://localhost:5000/data" method="post">
+            <input name="url" type="url" placeholder="Enter video link">
+            <br>
+            <input name="reg" type="password" placeholder="Enter udvash account registration number">
+            <br>
+            <input name="password" type="password" placeholder="Enter udvash account password">
+            <input type="submit" value="Download" id="submit_button">
+        </form>
+    </body>
+</html>
+
