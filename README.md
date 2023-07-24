@@ -14,7 +14,7 @@ Clone the repository
 
 ```bash
   git clone https://github.com/itsmmdoha/uvdownloader
-
+```
 Go to the project directory
 
 ```bash
