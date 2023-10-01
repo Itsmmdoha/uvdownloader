@@ -22,5 +22,5 @@ class User:
         res = r.get(self.url,cookies=self.cookie).text
         start = res.find("let videoId") + 15
         end = start + 11
-        return "https://www.9xyoutube.com/watch?v=" + res[start:end]
+        return "https://www.youtube.com/watch?v=" + res[start:end]
 
