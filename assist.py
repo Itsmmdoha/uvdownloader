@@ -19,10 +19,11 @@ class User:
             self.cookie[".ASPXAUTH"] = cookie_string
             return True
     def getVidLink(self):
-        res = r.get(self.url,cookies=self.cookie).text
-        start = res.find("let videoId") + 15
+        html = r.get(self.url,cookies=self.cookie).text
+        strippedHtml = html.replace(" ","")
+        start = strippedHtml.find("letvideoId") + 12
         end = start + 11
-        videoId = res[start:end]
+        videoId = strippedHtml[start:end]
         print(videoId)
         return "https://www.youtube.com/watch?v=" + videoId 
 
