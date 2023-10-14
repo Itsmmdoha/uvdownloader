@@ -4,6 +4,22 @@ body {
 	padding: 0;
 }
 
+#glow {
+	color: #00ff00; 
+	text-decoration: none; 
+	transition: text-shadow 0.3s ease-in-out;
+	text-shadow: 0 0 8px #00ff00, 0 0 12px #00ff00, 0 0 16px #00ff00; 
+}
+
+#glow:hover {
+	text-shadow: none; /* Remove glow effect on hover */
+}
+a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.2rem;
+}
+
 h1 {
 	font-family: Arial, sans-serif;
 	font-size: 3rem;
@@ -19,16 +35,6 @@ h4 {
 	color: white;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-}
-a {
-	color: #00ff00; 
-	text-decoration: none; 
-	transition: text-shadow 0.3s ease-in-out;
-	text-shadow: 0 0 8px #00ff00, 0 0 12px #00ff00, 0 0 16px #00ff00; 
-}
-
-a:hover {
-	text-shadow: none; /* Remove glow effect on hover */
 }
 
 
@@ -67,6 +73,8 @@ input[type="url"] {
 	margin: 8px 0;
 	box-sizing: border-box;
 }
+
+
 
 @media only screen and (max-width: 600px) {
 	form {
