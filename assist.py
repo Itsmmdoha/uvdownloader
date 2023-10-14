@@ -1,4 +1,5 @@
 import requests as r
+from bs4 import BeautifulSoup
 class User:
     cookie = {} 
     def __init__(self,url,reg,password):
@@ -20,10 +21,14 @@ class User:
             return True
     def getVidLink(self):
         html = r.get(self.url,cookies=self.cookie).text
-        strippedHtml = html.replace(" ","")
-        start = strippedHtml.find("letvideoId") + 12
-        end = start + 11
-        videoId = strippedHtml[start:end]
-        print(videoId)
-        return "https://www.youtube.com/watch?v=" + videoId 
-
+        if "initYoutubePlayer(containerId, videoId, thumbnailSrc, topOverlayText)" in html:
+            strippedHtml = html.replace(" ","")
+            start = strippedHtml.find("letvideoId") + 12
+            end = start + 11
+            videoId = strippedHtml[start:end]
+            print(videoId)
+            return "https://www.youtube.com/watch?v=" + videoId 
+        else:
+            soup = BeautifulSoup(html,"html.parser")
+            link = soup.find("video",attrs={"id":"video_1"}).find("source").get("src")
+            return link
