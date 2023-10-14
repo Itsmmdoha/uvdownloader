@@ -1,4 +1,4 @@
-from flask import Flask,request,render_template,redirect
+from flask import Flask,request,render_template,redirect, make_response
 from assist import User
 app = Flask(__name__)
 
@@ -16,7 +16,7 @@ def data():
         valid = target.login()
         if valid:
             url = target.getVidLink()
-            return redirect(url,code=302)
+            return render_template("redirect.html",link=url) 
         else:
             return render_template("invalid.html") 
     except:
