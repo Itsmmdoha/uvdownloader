@@ -1,4 +1,6 @@
+beautifulsoup4
 blinker
+bs4
 certifi
 charset-normalizer
 click
@@ -8,6 +10,8 @@ idna
 itsdangerous
 Jinja2
 MarkupSafe
+packaging
 requests
+soupsieve
 urllib3
 Werkzeug
