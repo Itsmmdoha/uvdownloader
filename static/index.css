@@ -1,14 +1,14 @@
 body {
-	background-color: purple;
+	background-color: #262626;
 	margin: 0;
 	padding: 0;
 }
 
 #glow {
-	color: #00ff00; 
+	color: #39b54a; 
 	text-decoration: none; 
 	transition: text-shadow 0.3s ease-in-out;
-	text-shadow: 0 0 8px #00ff00, 0 0 12px #00ff00, 0 0 16px #00ff00; 
+	text-shadow: 0 0 8px #39b54a, 0 0 12px #39b54a, 0 0 16px #39b54a; 
 }
 
 #glow:hover {
@@ -24,7 +24,7 @@ h1 {
 	font-family: Arial, sans-serif;
 	font-size: 3rem;
 	text-align: center;
-	color: white;
+	color: #39b54a;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 }
@@ -49,7 +49,7 @@ form {
 }
 
 input[type="submit"] {
-	background-color: red;
+	background-color: #39b54a;
 	width: 100px;
 	height: 50px;
 	border-radius: 5px;
@@ -61,7 +61,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-	background-color: salmon;
+	background-color: #368f3b;
 	color: black;
 }
 
