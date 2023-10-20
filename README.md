@@ -1,11 +1,11 @@
 # Uvdownloader
 
 Uvdownloader is a Flask web app that allows users to download videos from Udvash or Unmesh courses.
-Access the app [here](https://uvdownloader.onrender.com)
+Access the app [here](https://uvd.clickstat.xyz/)
 
-- Screenshot:
-![3-devices-black](https://github.com/Itsmmdoha/uvdownloader/assets/70005698/9ae35a9f-1def-46ba-a8e2-f9dc1b05982b)
+- preview:
 
+![thumbnail meterial (1)](https://github.com/Itsmmdoha/uvdownloader/assets/70005698/a70d4b2f-5492-4123-ab8d-7347fe4bc3fc)
 
 
 ## Run Locally
