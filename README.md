@@ -44,9 +44,27 @@ It logs in to your Udvash account from the back-end and fetches the required vid
 
 After downloading the video, you will be logged out from your browser. But don't worry, nobody is stealing your information; it's just because Udvash doesn't allow multi-device login.
 
+## LICENSE Update
+## License Change Notice
+
+I am changing the license for this repository from the MIT license to the Creative Commons Attribution-ShareAlike (CC BY-SA) license. This change is being made to prevent unauthorized use of my code, including the use of ads and the lack of proper attribution.
+
+Under the CC BY-SA license, users are permitted to:
+
+* Use, reuse, and adapt the code for any purpose, including commercial purposes.
+* Share the code with others, but they must give credit to the original author and distribute the code under the same license.
+
+Users are not permitted to:
+
+* Remove or change any copyright notices or other legal notices in the code.
+* Claim ownership of the code or make it appear that they are the original author.
+* Use the code to promote or support any illegal or harmful activities.
+
+I hope that this change will help to protect my work and ensure that it is used in a responsible and ethical manner.
+
 
 ## 🚀 About Me
 I'm an enthusiast.
-I have a youtube channel named [HoundSec](https://youtube.com/@HoundSec)
+I have a youtube channel called [HoundSec](https://youtube.com/@HoundSec)
 
 contact me at: <the_doha@protonmail.com>
