@@ -5,10 +5,16 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     if request.cookies.get("creds"):
-        r = render_template("logged_in.html")
+        response = make_response()
+        response.content_type = "text/html"
+        response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
+        response.data = render_template("logged_in.html")
     else:
-        r = render_template("index.html")
-    return r
+        response = make_response()
+        response.content_type = "text/html"
+        response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
+        response.data = render_template("index.html")
+    return response
 @app.route("/data",methods=["POST"])
 def data():
     try:
