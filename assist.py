@@ -21,15 +21,14 @@ class User:
             return True
     def getVidLink(self):
         html = r.get(self.url,cookies=self.cookie).text
+        strippedHtml = html.replace(" ","")
         if "initYoutubePlayer(containerId, videoId, thumbnailSrc, topOverlayText)" in html:
-            strippedHtml = html.replace(" ","")
             start = strippedHtml.find("letvideoId") + 12
             end = start + 11
             videoId = strippedHtml[start:end]
             print(videoId)
             return "https://www.youtube.com/watch?v=" + videoId 
         elif "data-youtube-video" in html:
-            strippedHtml = html.replace(" ","")
             start = strippedHtml.find("data-youtube-video") + len("data-youtube-video") + 2 # for = and "
             end = start + 11
             videoId = strippedHtml[start:end]
