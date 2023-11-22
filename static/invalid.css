@@ -1,5 +1,5 @@
 body {
-  background-color: purple;
+  background-color: #262626;
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: red;
+  background-color: #39b54a;
   color: white;
   border-radius: 20px;
   text-decoration: none;
@@ -28,6 +28,6 @@ body {
 }
 
 .button:hover {
-  background-color: salmon;
+  background-color: #4caf50;
 }
 
