@@ -28,6 +28,13 @@ class User:
             videoId = strippedHtml[start:end]
             print(videoId)
             return "https://www.youtube.com/watch?v=" + videoId 
+        elif "data-youtube-video" in html:
+            strippedHtml = html.replace(" ","")
+            start = strippedHtml.find("data-youtube-video") + len("data-youtube-video") + 2 # for = and "
+            end = start + 11
+            videoId = strippedHtml[start:end]
+            print(videoId)
+            return "https://www.youtube.com/watch?v=" + videoId 
         else:
             soup = BeautifulSoup(html,"html.parser")
             link = soup.find("video",attrs={"id":"video_1"}).find("source").get("src")
