@@ -18,8 +18,8 @@ def home():
 @app.route("/data",methods=["POST"])
 def data():
     try:
-        if request.cookie.get("Restricted"):
-            return render_template("error.html",error_message="You are limited to download a video every 6 hours, try downlod this video after 6 hours of your last download. We are setting this rate limit feature to prevent piracy.")
+        if request.cookies.get("Restricted"):
+            return render_template("error.html",error_message="You are limited to download one video every 6 hours, try downloding this video after 6 hours of your last download. We are setting this rate limit feature to prevent piracy.")
         elif request.cookies.get("creds"):
             cookie = request.cookies.get("creds")
             creds = cookie.split(":")
@@ -43,11 +43,11 @@ def data():
         else:
             response = make_response()
             response.delete_cookie("creds")
-            response.data = render_template("invalid.html",error_message="Invalid Input")
+            response.data = render_template("error.html",error_message="Invalid Credentials")
             response.content_type = "text/html"
             return response
     except:
-        return render_template("invalid.html") 
+        return render_template("error.html",error_message="Uknown Error") 
 
 if __name__=="__main__":
     app.run(debug=True)
