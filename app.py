@@ -19,7 +19,7 @@ def home():
 def data():
     try:
         if request.cookies.get("Restricted"):
-            return render_template("error.html",error_message="You are limited to download one video every 6 hours, try downloding this video after 6 hours of your last download. We are setting this rate limit feature to prevent piracy.")
+            return render_template("error.html",error_message="You are limited to downloading one video every 6 hours; try downloading this video after 6 hours of your last download. We are setting this rate limit feature to prevent piracy.")
         elif request.cookies.get("creds"):
             cookie = request.cookies.get("creds")
             creds = cookie.split(":")
