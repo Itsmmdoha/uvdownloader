@@ -18,7 +18,9 @@ def home():
 @app.route("/data",methods=["POST"])
 def data():
     try:
-        if request.cookies.get("creds"):
+        if request.cookie.get("Restricted"):
+            return render_template("error.html",error_message="You are limited to download a video every 6 hours, try downlod this video after 6 hours of your last download. We are setting this rate limit feature to prevent piracy.")
+        elif request.cookies.get("creds"):
             cookie = request.cookies.get("creds")
             creds = cookie.split(":")
             reg = creds[0]
@@ -33,6 +35,7 @@ def data():
         if valid:
             response = make_response()
             response.set_cookie("creds",f"{reg}:{password}",domain=request.host)
+            response.set_cookie("Restricted","True",domain=request.host,max_age=3600*6)
             url = target.getVidLink()
             response.content_type = "text/html"
             response.data = render_template("redirect.html",link = url)
@@ -40,7 +43,7 @@ def data():
         else:
             response = make_response()
             response.delete_cookie("creds")
-            response.data = render_template("invalid.html")
+            response.data = render_template("invalid.html",error_message="Invalid Input")
             response.content_type = "text/html"
             return response
     except:
