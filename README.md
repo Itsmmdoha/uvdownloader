@@ -47,7 +47,7 @@ docker run -p 8000:8000 houndsec/uvdownloader
 or
 
 ```bash
-docker run -p 8000:8000 houndsec/uvdownloader
+docker run -d -p 8000:8000 houndsec/uvdownloader
 ```
 To run in detached mode
 
@@ -75,7 +75,7 @@ docker run -p 8000:8000 houndsec/uvdownloader
 or
 
 ```bash
-docker run -p 8000:8000 houndsec/uvdownloader
+docker run -d -p 8000:8000 houndsec/uvdownloader
 ```
 To run in detached mode
 Then open [http://localhost:8000](http://localhost:8000)
