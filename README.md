@@ -1,7 +1,7 @@
 # Uvdownloader
 
 Uvdownloader is a Flask web app that allows users to download videos from Udvash or Unmesh courses.
-Access the app [here](https://uvd.houndsec.net/)
+Access the app [here](http://uvd.houndsec.net/)
 
 - preview:
 
@@ -36,6 +36,49 @@ Start the server
 Open [http://localhost:8000](https://localhost:8000)
 
 Done!
+
+## Docker
+
+There's a prebuilt image available on dockerhub, you can run it using the the following command,
+
+```bash
+docker run -p 8000:8000 houndsec/uvdownloader
+```
+or
+
+```bash
+docker run -p 8000:8000 houndsec/uvdownloader
+```
+To run in detached mode
+
+Then open [http://localhost:8000](http://localhost:8000)
+
+### Build Locally
+1. Clone the repo
+
+```bash
+  git clone https://github.com/itsmmdoha/uvdownloader
+```
+2. change directory
+```bash
+cd uvdownloader
+```
+3. Build the image
+
+```bash
+docker build -t houndsec/uvdownloader .
+```
+4. Rut it
+```bash
+docker run -p 8000:8000 houndsec/uvdownloader
+```
+or
+
+```bash
+docker run -p 8000:8000 houndsec/uvdownloader
+```
+To run in detached mode
+Then open [http://localhost:8000](http://localhost:8000)
 
 
 ## How it works
