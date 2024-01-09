@@ -5,8 +5,7 @@ Access the app [here](http://uvd.houndsec.net/)
 
 - preview:
 
-![thumbnail meterial (1)](https://github.com/Itsmmdoha/uvdownloader/assets/70005698/a70d4b2f-5492-4123-ab8d-7347fe4bc3fc)
-
+![uvd thumbnail](https://github.com/Itsmmdoha/uvdownloader/assets/70005698/bb4fe35a-e00c-4e8e-8df8-eac7082b55d5)
 
 ## Run Locally
 
